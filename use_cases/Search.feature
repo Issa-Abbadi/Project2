@@ -108,10 +108,54 @@ Scenario Outline: Search home by material
   |"FIREPLACE"|
   |"GARAGEPARKING"|
   |"SWIMMINGPOOL"|
- 
   
+  Scenario Outline: Search home by combination of at least 2 or above 
+  When I search about home by specifications <placement> <material> 1 2 3 4 5 6 <bedrooms> <bathrooms> <pets> <type> <lease length> <amenities>
+  Then a list of home that  matches the specifications should be returned and printed on the console
+  
+  Examples:
+ 
+  |placement||material| |type       |  |pets  | |amenities        | |bedrooms|   |bathrooms  | |lease length         |
+  |"VILLAGE"   ||"WOOD" | |"HOUSE"    |  |"NO" | |"GARAGEPARKING,FIREPLACE,ELEVATOR"| |"3"       | |"2"        | |"short term_6 months"|
+#  |"CITY"   ||"STONE" | |"HOUSE"    |  |"YES" | |"AIRCONDITIONING"| |"1"       | |"1"        | |"short term_6 months"|
+#  |"VILLAGE"||"BRICK" | |"APARTMENT"|  |"NO"  | |"AIRCONDITIONING"| |"2"       | |"2"        | |"long term_year"     |
+#  |  "NULL" ||"WOOD"  | |"NULL"     |  |"NULL"| |"BALCONY"        | |"3"       | |"3"        | |"NULL"               |
+#  |  "NULL" ||"NULL"  | |    "NULL" |  |"NULL"| |"ELEVATOR"       | |"4"       | |"NULL"     | |     "NULL"          |
+#  |  "NULL" || "NULL" | |   "NULL"  |  |"NULL"| |"FIREPLACE"      | |"5"       | | "NULL"    | |   "NULL"            |
+#  |  "NULL" || "NULL" | |    "NULL" |  |"NULL"| |"GARAGEPARKING"  | |"NULL"    | |    "NULL" | |     "NULL"          |
+#  |   "NULL"||"NULL"  | | "NULL"    |  |"NULL"| |"SWIMMINGPOOL"   | |"NULL"    | |   "NULL"  | |    "NULL"           |
+#  | "NULL"  || "NULL" | |    "NULL" |  |"NULL"|	|"NULL"           | |"NULL"    | |    "NULL" | |         "NULL"      |
+#  
+ 
+
+ 
+    
+     
+  
+ 
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
     
     
     
