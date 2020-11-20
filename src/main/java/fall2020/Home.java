@@ -51,28 +51,26 @@ public class Home {
 		
 		
 		for(int i=0 ; i < tokens3.length ; i++) {
-			switch(tokens3[i]) {
-			      case"AIRCONDITIONING":
-			          airConditioning = "AIRCONDITIONING";
-			          break;
-			      case"BALCONY":
-                      balcony = "BALCONY";
-                      break;
-			      case"ELEVATOR":
-                      elevator = "ELEVATOR";
-                      break;
-			      case"FIREPLACE":
-                      firePlace = "FIREPLACE";
-                      break;
-			      case"GARAGEPARKING":
-                      garageParking = "GARAGEPARKING";
-                      break;
-			      case"SWIMMINGPOOL":
-                      swimmingPool = "SWIMMINGPOOL";
-                      break;
-			      default:
-			    	  break;
+			if(tokens3[i].equals("AIRCONDITIONING" )) {
+				 airConditioning = "AIRCONDITIONING";
 			}
+			else if(tokens3[i].equals("BALCONY")) {
+				balcony = "BALCONY";
+			}
+			else if(tokens3[i].equals("ELEVATOR")) {
+				elevator = "ELEVATOR";
+			}
+			else if(tokens3[i].equals("FIREPLACE")) {
+				firePlace = "FIREPLACE";
+			}
+			else if(tokens3[i].equals("GARAGEPARKING")) {
+				garageParking = "GARAGEPARKING";
+			}
+			else if(tokens3[i].equals("SWIMMINGPOOL")) {
+				swimmingPool = "SWIMMINGPOOL";
+			}
+			
+			
 			
 			
 			price       = Integer.parseInt(tokens2[0]);
